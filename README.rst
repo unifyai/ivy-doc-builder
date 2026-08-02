@@ -1,7 +1,10 @@
 .. raw:: html
 
    <div style="display: block;" align="center">
-       <img class="dark-light" width="30%" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/ivy-doc-builder.svg"/>
+       <picture>
+           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/unifyai/ivy/main/assets/brand/ivy-docs-logo-dark.png">
+           <img class="dark-light" width="20%" alt="Ivy" src="https://raw.githubusercontent.com/unifyai/ivy/main/assets/brand/ivy-docs-logo-light.png"/>
+       </picture>
    </div>
 
 **Simple Documentation Builder for Ivy Projects.**

@@ -10,12 +10,12 @@
 .wy-dropdown-menu>dd>a:hover,
 .wy-dropdown-menu a:hover,
 .wy-nav-top {
-    background-color: #9477bf !important;
+    background-color: #2f9d97 !important;
 }
 
 .wy-menu-vertical header,
 .wy-menu-vertical p.caption {
-    color: #9477bf;
+    color: #1c6460;
 }
 
 .wy-menu-vertical a:visited {
@@ -30,14 +30,14 @@
 .rst-content code.literal,
 .rst-content tt.literal,
 .rst-content span.literal {
-    color: #9477bf;
+    color: #1c6460;
 }
 
 html.writer-html4 .rst-content dl:not(.docutils)>dt,
 html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)>dt {
-    background: #ebffe1;
-    color: #9477bf;
-    border-top: solid 3px #9477bf;
+    background: #ebe6dc;
+    color: #1c6460;
+    border-top: solid 3px #2f9d97;
 }
 
 .rst-content .note,
@@ -53,7 +53,7 @@ html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(
 .rst-content .wy-alert-info.tip,
 .rst-content .wy-alert-info.warning,
 .wy-alert.wy-alert-info {
-    background: #ebffe1;
+    background: #ebe6dc;
 }
 
 .rst-content .note .admonition-title,
@@ -83,12 +83,16 @@ html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(
 .rst-content .wy-alert.wy-alert-info .admonition-title,
 .wy-alert.wy-alert-info .rst-content .admonition-title,
 .wy-alert.wy-alert-info .wy-alert-title {
-    background-color: #9477bf !important;
+    background-color: #2f9d97 !important;
     color: #fff;
 }
 
 .highlight .gp {
-    color: #9477bf;
+    color: #1c6460;
+}
+
+html[data-theme="dark"] .highlight .gp {
+    color: #7fd0c8;
 }
 
 @media only screen and (min-width: 500px) {
@@ -140,10 +144,12 @@ html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(
     --pst-sidebar-header-font-size: 1.0em;
     --pst-sidebar-secondary-font-size: 0.9em;
     --pst-header-height: 0px;
+    /* Brand type stack: Space Grotesk display, Inter body, Roboto Mono code. */
     --pst-font-family-base: 'Inter', var(--pst-font-family-base-system);
-    --pst-font-family-heading: 'Inter', var(--pst-font-family-base-system);
+    --pst-font-family-heading: 'Space Grotesk', 'Inter', var(--pst-font-family-base-system);
+    --pst-font-family-monospace: 'Roboto Mono', var(--pst-font-family-monospace-system);
     --pst-font-weight-heading: 700;
-    --pst-font-color-heading: #0A0C13;
+    --pst-font-color-heading: #0a1410;
 }
 
 .navbar-item,
@@ -152,25 +158,44 @@ html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(
     max-height: calc(var(--pst-header-height) - 16px - 26px) !important;
 }
 
+/* Brand canvas: paper/ink in light, console dark in dark.
+   Values mirror @unity/brand tokens.css + semantic.css. */
 html[data-theme="light"] {
-    --pst-color-primary: #9477bf;
-    --pst-color-secondary: #9477bf;
+    /* Deep teal for text/links so contrast holds on the paper canvas. */
+    --pst-color-primary: #1c6460;
+    --pst-color-secondary: #2f9d97;
+    --pst-color-background: #f5f1ea;
+    --pst-color-on-background: #f5f1ea;
+    --pst-color-surface: #ebe6dc;
+    --pst-color-border: #d9d2c4;
+    --pst-color-text-base: #0a1410;
+    --pst-color-text-muted: #6b6a64;
+    --pst-color-inline-code: #1c6460;
+    --pst-color-inline-code-links: #1c6460;
 }
 
 html[data-theme="dark"] {
-    --pst-font-color-heading: #E9E9EA;
-    --pst-color-primary: #9477bf;
-    --pst-color-secondary: #9477bf;
+    --pst-font-color-heading: #eef0ea;
+    --pst-color-primary: #2f9d97;
+    --pst-color-secondary: #2f9d97;
+    --pst-color-background: #0d0f12;
+    --pst-color-on-background: #0d0f12;
+    --pst-color-surface: #1b2024;
+    --pst-color-border: rgba(238, 240, 234, 0.18);
+    --pst-color-text-base: #eef0ea;
+    --pst-color-text-muted: rgba(238, 240, 234, 0.68);
+    --pst-color-inline-code: #7fd0c8;
+    --pst-color-inline-code-links: #7fd0c8;
 }
 
 html[data-theme="dark"] a.current.reference.internal {
-    background: #2a1c33;
+    background: #12302e;
     padding-left: 10px;
     margin-left: -10px;
 }
 
 html[data-theme="light"] a.current.reference.internal {
-    background: #f0eff4;
+    background: #ebe6dc;
     padding-left: 10px;
     margin-left: -10px;
 }
@@ -220,7 +245,7 @@ nav.bd-docs-nav {
 }
 
 .w-nav-link:hover {
-    color: #9477bf !important;
+    color: #1c6460 !important;
 }
 
 .dropdown-menu.show {
@@ -304,7 +329,7 @@ div.nboutput.container div.output_area div[class*=highlight]>pre {
 
 :is([data-theme=dark] .dark\:hover\:text-\[\#00b828\]:hover) {
     --tw-text-opacity: 1 !important;
-    color: rgb(0 184 40/var(--tw-text-opacity)) !important;
+    color: rgb(47 157 151/var(--tw-text-opacity)) !important;
 }
 
 ul {

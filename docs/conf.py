@@ -20,8 +20,8 @@ sys.path.insert(0, os.path.abspath(".."))
 # -- Project information -----------------------------------------------------
 
 project = "Ivy"
-copyright = "2024 [Ivy], All rights reserved"
-author = "Ivy"
+copyright = "2026 Unify, All rights reserved"
+author = "Unify"
 
 # The full version, including alpha/beta/rc tags
 release = os.getenv("IVY_VERSION") or "dev"
@@ -67,18 +67,23 @@ html_theme = "pydata_sphinx_theme"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
+# Brand type stack: Space Grotesk headings, Inter body, Roboto Mono labels/code.
 html_css_files = [
     "css/custom.css",
-    "https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900",
+    "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@100..900&family=Roboto+Mono:wght@400;500&display=swap",  # noqa: E501
 ]
 html_js_files = []
+
+# Brand assets are vendored in the ivy repo (assets/brand) so the docs do not
+# depend on repositories outside the organisation.
+BRAND_ASSETS = "https://raw.githubusercontent.com/unifyai/ivy/main/assets/brand"
 
 html_theme_options = {
     "header_links_before_dropdown": 100,
     "secondary_sidebar_items": ["page-toc"],
     "logo": {
-        "image_light": "https://uploads-ssl.webflow.com/643fb31f2ef62cf324fab8ca/65423c2ce1f61fda416b592c_logo_unify.svg",  # noqa: E501
-        "image_dark": "https://assets-global.website-files.com/643fb31f2ef62cf324fab8ca/6546745c0b48a47df4098dec_logo_unify-white.svg",  # noqa: E501
+        "image_light": f"{BRAND_ASSETS}/ivy-docs-logo-light.png",
+        "image_dark": f"{BRAND_ASSETS}/ivy-docs-logo-dark.png",
         "link": "https://ivy.dev",
     },
     "switcher": {"version_match": release},
@@ -96,7 +101,7 @@ html_sidebars = {
 
 html_title = "Ivy Documentation"
 
-html_favicon = "https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/ivy.svg"
+html_favicon = f"{BRAND_ASSETS}/ivy-mark.png"
 
 autodoc_member_order = "alphabetical"
 
