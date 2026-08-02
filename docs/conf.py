@@ -86,7 +86,6 @@ html_theme_options = {
         "image_dark": f"{BRAND_ASSETS}/ivy-docs-logo-dark.png",
         "link": "https://ivy.dev",
     },
-    "switcher": {"version_match": release},
     "analytics": {
         "google_analytics_id": "G-QP5BET66XH",
     }
