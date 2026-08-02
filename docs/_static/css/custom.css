@@ -123,10 +123,6 @@ html[data-theme="dark"] .highlight .gp {
     width: 100%;
 }
 
-.navbar>div {
-    padding: 26px 56px 16px;
-}
-
 @media only screen and (min-width: 900px) {
     .video {
         width: 80%;
@@ -143,19 +139,12 @@ html[data-theme="dark"] .highlight .gp {
     --pst-sidebar-font-size: 1.0em;
     --pst-sidebar-header-font-size: 1.0em;
     --pst-sidebar-secondary-font-size: 0.9em;
-    --pst-header-height: 0px;
     /* Brand type stack: Space Grotesk display, Inter body, Roboto Mono code. */
     --pst-font-family-base: 'Inter', var(--pst-font-family-base-system);
     --pst-font-family-heading: 'Space Grotesk', 'Inter', var(--pst-font-family-base-system);
     --pst-font-family-monospace: 'Roboto Mono', var(--pst-font-family-monospace-system);
     --pst-font-weight-heading: 700;
     --pst-font-color-heading: #0a1410;
-}
-
-.navbar-item,
-.navbar-brand {
-    height: calc(var(--pst-header-height) - 16px - 26px) !important;
-    max-height: calc(var(--pst-header-height) - 16px - 26px) !important;
 }
 
 /* Brand canvas: paper/ink in light, console dark in dark.
@@ -211,41 +200,6 @@ h6 {
 
 nav.bd-docs-nav {
     padding-right: 24px;
-}
-
-.nav-menu {
-    float: right;
-    position: relative;
-    padding-right: 120px;
-}
-
-.menu-link-holder,
-.menu-holder {
-    grid-column-gap: 56px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-@media only screen and (max-width: 960px) {
-    .menu-link-holder {
-        flex-wrap: wrap;
-    }
-
-    .menu-link-holder>a {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .navbar-item:has(.menu-holder) {
-        height: unset !important;
-        max-height: unset !important;
-    }
-}
-
-.w-nav-link:hover {
-    color: #1c6460 !important;
 }
 
 .dropdown-menu.show {
