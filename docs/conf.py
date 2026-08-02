@@ -79,7 +79,11 @@ html_js_files = []
 BRAND_ASSETS = "https://raw.githubusercontent.com/unifyai/ivy/main/assets/brand"
 
 html_theme_options = {
-    "header_links_before_dropdown": 100,
+    # Keep the header to a few links and collapse the rest into "More". This
+    # was 100 (i.e. never collapse) back when the header was hidden and
+    # replaced by an injected navbar; with the stock header visible, 100
+    # overflows and wraps.
+    "header_links_before_dropdown": 5,
     "secondary_sidebar_items": ["page-toc"],
     "logo": {
         "image_light": f"{BRAND_ASSETS}/ivy-docs-logo-light.png",
